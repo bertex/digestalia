@@ -3,9 +3,7 @@
 
 	app.controller("TabController", function() {
 		this.tab = 1;
-		this.background = "img/fons_petit.jpg";
 		this.banner = "img/logoDigestalia.png";
-		this.fons = "col-centre-petit";
 
 		/* definicio de les diferents gallery */
 

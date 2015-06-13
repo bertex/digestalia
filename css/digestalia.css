@@ -69,8 +69,11 @@ a, a:hover, a:focus{
 	background-color: transparent;
 	border: 1px solid transparent;
 }
-.taronja {
-	color: #CD5D2B;
+.subtitol {
+	background-color: #94D60A;
+	color: #0090BF;
+	padding-left: 20px;
+	padding-top: 0px;
 }
 .subratllar {
  text-decoration: underline;
@@ -187,8 +190,8 @@ a, a:hover, a:focus{
 	font-family:WC_RoughTrad;
 }
 .navbar-default {
-	background-color: #94D60A;
-	border-color: #94D60A;;
+	background-color: transparent;
+	border-color: transparent;
 }
 
 .navbar-default .navbar-nav>li>a {
