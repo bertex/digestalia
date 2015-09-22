@@ -15,7 +15,11 @@
  */
 
 get_header(); ?>
-
+ <div class="row" ng-init="tab.setTab(XXXXX)">
+	    <?php include 'navigation.html';?>
+	</div>
+    <div class="col-lg-11 col-md-11 col-sm-11">
+    	<div class="row-fluid col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
@@ -33,6 +37,8 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
+	</div>
+	</div>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
