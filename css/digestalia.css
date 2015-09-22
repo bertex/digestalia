@@ -183,15 +183,23 @@ a, a:hover, a:focus{
 }
 
 /* nav BAR*/
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .navbar {
 
 	margin-bottom: 0px;
-	border: 1px solid transparent;
+	border: 1px solid #94D60A;
 	font-family:WC_RoughTrad;
 }
 .navbar-default {
 	background-color: transparent;
 	border-color: transparent;
+}
+.navbar-collapse {
+	background-color: #94D60A;
+	border-color: #94D60A;
 }
 
 .navbar-default .navbar-nav>li>a {

@@ -52,31 +52,7 @@
 		                  { src:"img/inici/boletweb.jpg"},
 		                  { src:"img/inici/aprofherba.jpg"} ];
 
-		/* funció que defineix quin banner i quin fons te cada pagina */ 
-		this.setTab = function(setTab) {
-			this.tab = setTab;
-			if ((setTab==1)||(setTab==7)) {
-				this.background="img/fons_web.jpg";
-				this.banner ="img/banner_web.jpg";
-				if (setTab==7)  {
-					this.fons = "col-centre-faq"
-				} else {
-					this.fons="col-centre-portada";	
-				}
-			} else if  ((setTab>=9) || setTab<=13){
-				this.fons="col-centre-circuits";
-			} else if ((setTab>=15)&& (setTab <=18) ) {
-				this.background="img/fons_activitats.jpg";
-				this.banner ="img/banner_activitats.jpg";
-				this.fons="col-centre-activitats"
-			} else if ((setTab==20) ||(setTab==14)) {
-				this.background="img/fons_tarifes.jpg";
-				this.banner ="img/banner_tarifes.jpg";
-				this.fons = "col-centre-tarifes";
-			} else if (setTab==21)  {
-				this.fons = "col-centre-tiquet";
-			}
-		};
+
 	});
 
 	/* Controlador Modal (abans que s'obri) */ 
