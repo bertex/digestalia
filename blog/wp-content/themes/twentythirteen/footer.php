@@ -1,4 +1,4 @@
-</div>
+
 <div class="footer row ">
     <!-- Begin MailChimp Signup Form -->
     <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css"

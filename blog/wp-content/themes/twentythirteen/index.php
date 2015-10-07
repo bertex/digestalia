@@ -15,29 +15,29 @@
  */
 
 get_header(); ?>
- <div class="row" ng-init="tab.setTab(XXXXX)">
+ 	<div class="row" ng-init="tab.setTab(XXXXX)">
 	    <?php include 'navigation.html';?>
 	</div>
-    <div class="col-lg-11 col-md-11 col-sm-11">
-    	<div class="row-fluid col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+	<div class="col-centre row">
+    	<div class="col-lg-11 col-md-11 col-sm-11">
+			<div id="primary" class="content-area">
+				<div id="content" class="site-content" role="main">
+					<?php if ( have_posts() ) : ?>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+						<?php /* The loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'content', get_post_format() ); ?>
+						<?php endwhile; ?>
 
-			<?php twentythirteen_paging_nav(); ?>
+						<?php twentythirteen_paging_nav(); ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+					<?php else : ?>
+						<?php get_template_part( 'content', 'none' ); ?>
+					<?php endif; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	</div>
+				</div><!-- #content -->
+			</div><!-- #primary -->
+		</div>
 	</div>
 
 
