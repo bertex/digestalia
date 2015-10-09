@@ -54,6 +54,7 @@ define('AUTH_SALT',        'IcW_WVQb>+r[d|D93kM^M5|NC1lR8a#[{ @5}|EM|TEC&],RS_<b
 define('SECURE_AUTH_SALT', 'B8sDBS#{]-+9q(6Ac>[#|Xi[HrI$*9+h+:|4FgFv]?Bg<h;JZ|qvN(c}YX?5Sol#');
 define('LOGGED_IN_SALT',   '|T]EiDk428)|C1(-OgD-QV!v_F>(_g.T_Kk7j+t7iB@D.l}{sfF*#|-[+h^-^+S2');
 define('NONCE_SALT',       'a4cF|lM.eT8Rz>07|LK*CD&>$s.[N=Lhanov]FT=lBi<-B9XKO9=7Az9UC4JVKUC');
+define('WPLANG'.'ca');
 
 /**#@-*/
 
