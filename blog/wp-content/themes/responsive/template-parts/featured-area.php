@@ -15,72 +15,61 @@ $emtpy_cta = ( empty( $responsive_options['cta_text'] ) ) ? false : true;
 ?>
 
 <div id="featured" class="grid col-940">
-	<?php get_template_part( 'loop-header', get_post_type() ); ?>
 
-	<?php
-	global $wp_query, $paged;
-	if ( get_query_var( 'paged' ) ) {
-		$paged = get_query_var( 'paged' );
-	}elseif ( get_query_var( 'page' ) ) {
-		$paged = get_query_var( 'page' );
-	}
-	else {
-		$paged = 1;
-	}
-	$blog_query = new WP_Query( array( 'post_type' => 'post', 'paged' => $paged ) );
-	$temp_query = $wp_query;
-	$wp_query = null;
-	$wp_query = $blog_query;
-	$wp_post_count =0;
+	<div id="featured-content" class="grid col-460">
 
-	if ( $blog_query->have_posts() ) :
-
-		while( $blog_query->have_posts() ) : $blog_query->the_post();
-			if ($wp_post_count == 2) :
-                break;
-            endif;
+		<h1 class="featured-title">
+			<?php
+			if ( isset( $responsive_options['home_headline'] ) && $db && $empty )
+				echo $responsive_options['home_headline'];
+			else {
+				_e( 'Hello, World!', 'responsive' );
+			}
 			?>
+		</h1>
 
-			<?php responsive_entry_before(); ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
-
-				<?php get_template_part( 'post-meta', get_post_type() ); ?>
-
-				<div class="post-entry">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
-						</a>
-					<?php endif; ?>
-					<?php the_excerpt(); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
-				</div><!-- end of .post-entry -->
-
-				<?php responsive_entry_bottom(); ?>
-			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+		<h2 class="featured-subtitle">
+			<?php
+			if ( isset( $responsive_options['home_subheadline'] ) && $db && $empty )
+				echo $responsive_options['home_subheadline'];
+			else
+				_e( 'Your H2 subheadline here', 'responsive' );
+			?>
+		</h2>
 
 		<?php
-		    $wp_post_count++;
-		endwhile;
+		if ( isset( $responsive_options['home_content_area'] ) && $db && $empty ) {
+			echo do_shortcode( wpautop( $responsive_options['home_content_area'] ) );
+		} else {
+			echo '<p>' . __( 'Your title, subtitle and this very content is editable from Theme Option. Call to Action button and its destination link as well. Image on your right can be an image or even YouTube video if you like.', 'responsive' ) . '</p>';
+		} ?>
 
-		if ( $wp_query->max_num_pages > 1 ) :
-			?>
-			<div class="navigation">
-				<div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'responsive' ), $wp_query->max_num_pages ); ?></div>
-				<div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'responsive' ), $wp_query->max_num_pages ); ?></div>
-			</div><!-- end of .navigation -->
-		<?php
-		endif;
 
-	else :
+		<?php if ( $responsive_options['cta_button'] == 0 ): ?>
 
-		get_template_part( 'loop-no-posts', get_post_type() );
+			<div class="call-to-action">
 
-	endif;
-	$wp_query = $temp_query;
-	wp_reset_postdata();
-	?>
+				<a href="<?php echo $responsive_options['cta_url']; ?>" class="blue button">
+					<?php
+					if ( isset( $responsive_options['cta_text'] ) && $db && $emtpy_cta )
+						echo $responsive_options['cta_text'];
+					else
+						_e( 'Call to Action', 'responsive' );
+					?>
+				</a>
+
+			</div><!-- end of .call-to-action -->
+
+		<?php endif; ?>
+
+	</div><!-- end of .col-460 -->
+
+	<div id="featured-image" class="grid col-460 fit">
+
+		<?php $featured_content = ( !empty( $responsive_options['featured_content'] ) ) ? $responsive_options['featured_content'] : '<img class="aligncenter" src="' . get_template_directory_uri() . '/core/images/featured-image.png" width="440" height="300" alt="" />'; ?>
+
+		<?php echo do_shortcode( wpautop( $featured_content ) ); ?>
+
+	</div><!-- end of #featured-image -->
 
 </div><!-- end of #featured -->

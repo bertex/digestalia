@@ -1,0 +1,118 @@
+/*
+ Theme Name:   Responsive Child
+ Theme URI:    http://cyberchimps.com/responsive-theme/
+ Description:  Responsive Child Theme
+ Author:       Albert Renom
+ Author URI:   http://example.com
+ Template:     responsive
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, rtl-language-support, responsive-layout, fluid-layout, featured-images
+ Text Domain:  responsive-child
+*/
+#logo img {
+max-width: 960px;
+width: 100%;
+}
+
+
+.menu,
+.menu a,
+.menu a:hover,
+.menu .current_page_item a,
+ul.menu > li:hover {
+    background: none;
+    border: none;
+    filter: none;
+    text-shadow: none;
+}
+
+@media screen and (min-width: 981px) {
+/* Menu bar */
+    .menu {
+        background-color: #94D60A;
+        border-radius: 4px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#94D60A), to(#94D60A));
+        background-image: -webkit-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -moz-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -ms-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -o-linear-gradient(top, #94D60A, #94D60A);
+        background-image: linear-gradient(top, #94D60A, #94D60A);
+        clear: both;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#94D60A, endColorstr=#94D60A);
+        margin: 0 auto;
+    }
+    /* Menu items */
+    .menu a {
+        border-left: 1px solid transparent;
+        color: #0090BF;
+        font-size: 20px;
+        text-shadow: none;
+        font-weight: 700;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 0.9em;
+    }
+    /* Menu item hover */
+    .menu a:hover {
+        background-color: #0090BF;
+        text-shadow: none;
+        border-radius: 4px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#0090BF), to(#0090BF));
+        background-image: -webkit-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -moz-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -ms-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -o-linear-gradient(top, #0090BF, #0090BF);
+        background-image: linear-gradient(top, #0090BF, #0090BF);
+        color: #94D60A;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0090BF, endColorstr=#0090BF);
+    }
+    /* Current page */
+    .menu .current_page_item a,
+    .menu .current_page_item,
+    .menu .current_menu_item,
+    .menu .current-menu-item a {
+        background-color: #0090BF;
+        border-radius: 4px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#0090BF), to(#0090BF));
+        background-image: -webkit-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -moz-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -ms-linear-gradient(top, #0090BF, #0090BF);
+        background-image: -o-linear-gradient(top, #0090BF, #0090BF);
+        background-image: linear-gradient(top, #0090BF, #0090BF);
+        color: #94D60A;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0090BF, endColorstr=#0090BF);
+    }
+    .menu a {
+        padding: 0 2em;
+    }
+    .menu li {
+        _width: 20%;
+    }
+}
+media screen and (max-width: 650px) {
+    /* Main mobile menu*/
+    .js .main-nav {
+        background-color: #94D60A;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#94D60A), to(#94D60A));
+        background-image: -webkit-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -moz-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -ms-linear-gradient(top, #94D60A, #94D60A);
+        background-image: -o-linear-gradient(top, #94D60A, #94D60A);
+        background-image: linear-gradient(top, #94D60A, #94D60A);
+            clear: both;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#94D60A, endColorstr=#94D60A);
+    }
+    /* Current page menu text */
+    .js .main-nav #responsive_current_menu_item {
+        color: #0090BF;
+    }
+    /* Dopdown item */
+    .js .main-nav .menu li a {
+        color: #0090BF;
+    }
+}
+.widget-wrapper {
+    padding: 8px;
+}
