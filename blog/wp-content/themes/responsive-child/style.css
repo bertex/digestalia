@@ -11,12 +11,18 @@
  Tags:         white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, rtl-language-support, responsive-layout, fluid-layout, featured-images
  Text Domain:  responsive-child
 */
+
+
 #logo img {
 max-width: 960px;
 width: 100%;
 }
 
+.home-widgets .widget-wrapper {
+	min-height: 250px;
+}
 
+/* Clean All values of responsive Theme */
 .menu,
 .menu a,
 .menu a:hover,
@@ -27,7 +33,7 @@ ul.menu > li:hover {
     filter: none;
     text-shadow: none;
 }
-
+/* Costume Desktop Menu  */
 @media screen and (min-width: 981px) {
 /* Menu bar */
     .menu {
@@ -91,6 +97,8 @@ ul.menu > li:hover {
         _width: 20%;
     }
 }
+
+/* Costume Mobile Menu */
 media screen and (max-width: 650px) {
     /* Main mobile menu*/
     .js .main-nav {
