@@ -35,6 +35,10 @@ width: 100%;
 	min-height: 250px;
 }
 
+#footer {
+    background-color #94D60A;
+}
+
 /* Clean All values of responsive Theme */
 .menu,
 .menu a,
@@ -169,3 +173,31 @@ ul.menu > li:hover {
     	color: #94D60A;
     }
 }
+
+/* =Hide whole post meta
+-------------------------------------------------------------- */
+.post-meta {
+    display: none;
+}
+/* =Hide "Posted on"
+-------------------------------------------------------------- */
+.post-meta .posted {
+    display: none;
+}
+/* =Hide date
+-------------------------------------------------------------- */
+.post-meta .timestamp {
+    display: none;
+}
+/* =Hide "by"
+-------------------------------------------------------------- */
+.post-meta .byline {
+    display: none;
+}
+/* =Hide author
+-------------------------------------------------------------- */
+.post-meta .author {
+    display: none;
+}
+
+
