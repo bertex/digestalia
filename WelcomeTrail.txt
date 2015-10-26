@@ -4,3 +4,9 @@
 # cd /var/www
 # sudo ln -s /path/to/digestalia digestalia
 # sudo /etc/init.d/apache2 restart
+# sudo a2enmod rewrite
+# sudo vi /etc/apache2/sites-available/default
+    <Directory "/var/www/html">
+        AllowOverride All
+    </Directory>
+# sudo service apache2 restart
