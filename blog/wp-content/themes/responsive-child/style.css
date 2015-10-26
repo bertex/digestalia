@@ -18,6 +18,19 @@ max-width: 960px;
 width: 100%;
 }
 
+#featured-content {
+    padding-left:20px;
+    padding-top:10px;
+}
+
+#featured-content p {
+    text-align: justify;
+}
+
+.breadcrumb-list {
+    display: none;
+}
+
 .home-widgets .widget-wrapper {
 	min-height: 250px;
 }
@@ -27,12 +40,18 @@ width: 100%;
 .menu a,
 .menu a:hover,
 .menu .current_page_item a,
+.menu li li,
 ul.menu > li:hover {
     background: none;
     border: none;
     filter: none;
     text-shadow: none;
 }
+
+.widget-wrapper {
+    padding: 8px;
+}
+
 /* Costume Desktop Menu  */
 @media screen and (min-width: 981px) {
 /* Menu bar */
@@ -58,7 +77,8 @@ ul.menu > li:hover {
         font-weight: 700;
         height: 45px;
         line-height: 45px;
-        padding: 0 0.9em;
+        _padding: 0 0.9em;
+        padding: 0 2em;
     }
     /* Menu item hover */
     .menu a:hover {
@@ -90,16 +110,27 @@ ul.menu > li:hover {
         color: #94D60A;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0090BF, endColorstr=#0090BF);
     }
-    .menu a {
-        padding: 0 2em;
+    /* Menu dropdown */
+    .menu li li,
+    .menu li li a {
+    	background: #94D60A;
+    	background-image: none;
+    	border-radius: 4px;
+    	color: #0090BF;
+        margin: -1px 0 1px 0;
     }
-    .menu li {
-        _width: 20%;
+    /* Menu dropdown hover */
+    .menu li li a:hover {
+    	background: #0090BF !important;
+    	background-image: none;
+    	border: none;
+    	color: #94D60A;
+    	filter: none;
     }
 }
 
 /* Costume Mobile Menu */
-media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
     /* Main mobile menu*/
     .js .main-nav {
         background-color: #94D60A;
@@ -117,10 +148,24 @@ media screen and (max-width: 650px) {
         color: #0090BF;
     }
     /* Dopdown item */
-    .js .main-nav .menu li a {
+    .js .main-nav .menu li a,
+    .js .main-nav .menu li li {
+        background-color: #94D60A;
         color: #0090BF;
     }
-}
-.widget-wrapper {
-    padding: 8px;
+    /* Dropdown current item */
+    .js .main-nav .menu li.current_page_item,
+    .js .menu .current_page_item a,
+    .js .menu .current-menu-item a {
+    	background-color: #94D60A;
+    	color: #0090BF;
+    }
+    /* Hover on dropdown items */
+    .js .main-nav .menu li a:hover,
+    .js .main-nav .menu li li a:hover {
+    	background-image: none;
+    	filter: none;
+    	background-color: #0090BF!important;
+    	color: #94D60A;
+    }
 }

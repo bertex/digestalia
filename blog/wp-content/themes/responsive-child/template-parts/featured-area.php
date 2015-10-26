@@ -15,6 +15,7 @@ $emtpy_cta = ( empty( $responsive_options['cta_text'] ) ) ? false : true;
 ?>
 
 <div id="featured" class="grid col-940">
+	<div id="featured-content">
 	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
 	<?php get_template_part( 'loop-header', get_post_type() ); ?>
 
@@ -83,5 +84,5 @@ $emtpy_cta = ( empty( $responsive_options['cta_text'] ) ) ? false : true;
 	$wp_query = $temp_query;
 	wp_reset_postdata();
 	?>
-
+    </div> <!-- end of #featured-content -->
 </div><!-- end of #featured -->
